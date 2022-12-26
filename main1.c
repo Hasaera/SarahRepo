@@ -3,12 +3,14 @@
 #include "labyrinthAPI.h"
 #include "clientAPI.h"
 
+//mdp git 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
+
 int main() {
     
     //initialisation du Labyrinthe
   int sizeX, sizeY, lab, tileN, tileE, tileS, tileW, tileItem;	
   char *monLab[715];
-  connectToServer("172.105.76.204", 1234 , "Sarah"); 
+  connectToServer("172.105.76.204", 1234 , "Sarahcmoi"); 
   waitForLabyrinth("TRAINING DONTMOVE start=0 timeout=1000 ", monLab, &sizeX, &sizeY);
   int turn = getLabyrinth(&lab, &tileN, &tileE, &tileS, &tileW, &tileItem);
   
@@ -56,13 +58,13 @@ int main() {
 	  		case 3 : tuile = INSERT_COLUMN_BOTTOM;
 	  			break;
 	  		}
-	  		printf("rentrez un nombre impaire qui indique le numéro de la ligne ou de la colonne où on insère la tuile\n");
+	  		printf("Entrez un nombre impaire qui indique le numéro de la ligne ou de la colonne où on insère la tuile\n");
 	  		scanf("%d", &number1 );
-	  		printf("indiquer le nombre de rotation de quart de tour pour insérer la tuile  (entre 0 et 3)\n");
+	  		printf("Indiquez le nombre de rotation de quart de tour pour insérer la tuile  (entre 0 et 3)\n");
 	  		scanf("%d", &rotation1 );
-	  		printf("Rentrez la ligne ou vous voulez déplacer votre pion (nombre entre 1 et %d) \n", sizeX);
+	  		printf("Entrez la ligne ou vous voulez déplacer votre pion (nombre entre 1 et %d) \n", sizeX);
 	  		scanf("%d", &X1);
-	  		printf("Rentrez la colonne ou vous voulez déplacer votre pion(nombre entre 1 et %d) \n", sizeY);
+	  		printf("Entrez la colonne ou vous voulez déplacer votre pion(nombre entre 1 et %d) \n", sizeY);
 	  		scanf("%d", &Y1);
 	  		moveME->insert = tuile;
 	  		moveME->number = number1;
@@ -76,7 +78,7 @@ int main() {
 			printf("Voulez vous envoyer un commentaire \n 0 pour oui et 1 pour non \n");
 			scanf("%d", &comments);
 			if(comments == 0){
-				printf("Rentrez le commentaire à envoyer\n");
+				printf("Entrez le commentaire à envoyer\n");
 				scanf("%s", commentaires);
 				sendComment(commentaires);
 			}
