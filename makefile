@@ -1,4 +1,4 @@
-SRC = clientAPI.c labyrinthAPI.c main1.c 
+SRC = clientAPI.c labyrinthAPI.c main1.c Laby.c
 OBJ = $(SRC:.c=.o)
 CC = gcc 
 CFLAGS = -Wall -Wextra
